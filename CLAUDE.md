@@ -1,7 +1,5 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
 A minimal Express REST API used as a course project for setting up Claude Code on a real codebase.
 
 ## Commands
@@ -17,9 +15,9 @@ To run a single test file: `node --test tests/users.test.js`
 
 ## Architecture
 
-- `server.js` — entry point; mounts route modules and exports `app` (no live port) for test imports
-- `routes/` — one file per resource (`users.js`, `health.js`); each file creates an `express.Router` and exports it
-- `db/store.js` — in-memory data layer; all data access goes through its exported functions (`getAllUsers`, `getUserById`, `createUser`); data resets on restart
+- `server.js` — entry point
+- `routes/` — one file per resource
+- `db/store.js` — in-memory data layer
 
 ## Conventions
 
